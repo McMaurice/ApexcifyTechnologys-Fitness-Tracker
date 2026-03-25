@@ -19,7 +19,7 @@ class _GoalsScreenState extends State<GoalsScreen> {
   @override
   void initState() {
     super.initState();
-    _ctrl = Get.find<AppController>(); // controller already registered in HomeScreen
+    _ctrl = Get.find<AppController>(); 
     final g = _ctrl.goal.value;
     _stepsCtrl = TextEditingController(text: g.dailySteps.toString());
     _calCtrl = TextEditingController(text: g.dailyCalories.toInt().toString());
