@@ -97,13 +97,15 @@ class StatCard extends StatelessWidget {
           Text('Goal: $goal', style: const TextStyle(color: AppColors.textMuted, fontSize: 10.5)),
           const SizedBox(height: 10),
           // Progress bar
-          ClipRRect(
-            borderRadius: BorderRadius.circular(99),
-            child: LinearProgressIndicator(
-              value: progress,
-              minHeight: 5,
-              backgroundColor: color.withValues(alpha: 0.13),
-              valueColor: AlwaysStoppedAnimation<Color>(color),
+          Expanded(
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(99),
+              child: LinearProgressIndicator(
+                value: progress,
+                minHeight: 5,
+                backgroundColor: color.withValues(alpha: 0.13),
+                valueColor: AlwaysStoppedAnimation<Color>(color),
+              ),
             ),
           ),
         ],
